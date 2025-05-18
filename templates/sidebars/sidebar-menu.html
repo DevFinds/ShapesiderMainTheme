@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sidebar-menu.css">
+
+    <!-- Скрипт для вывода иконок 
+    containerId, folderPath, iconName, extension, width, height, color, hoverColor
+    -->
+    <script src="/libs/DFSvgInserter/DFSvgInserter.js"></script>
+    
+    <!-- Скрипт для замены пути к файлу -->
+    <script>
+        const ICONS_PATH = '/assets/icons';
+        const IMG_PATH = '/assets/img';
+    </script>
+
+    <title>Document</title>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Главный контейнер бокового меню -->
+    <div class="sidebar">
+
+        <!-- Логотип ShapeSider -->
+        <div class="logo-container" id="logo-container">
+            <script>
+                insertIcon('logo-container', IMG_PATH, 'logo', 'svg', 147, 35);
+            </script>
+        </div>
+     
+        <hr>
+
+        <!-- Контейнер с пунктами меню -->
+        <div class="nav-menu">
+            <a class="nav-menu__menu-item" href="#">
+                <div class="nav-menu__menu-item_icon" id="nav-menu__menu-item_icon_home">
+                    <script>
+                        insertIcon('nav-menu__menu-item_icon_home', ICONS_PATH, 'home', 'svg', null, null, '#7CA3F6', 'red');   
+                    </script>
+                </div>
+                Главная
+            </a>
+
+            <a class="nav-menu__menu-item" href="#">
+                <div class="nav-menu__menu-item_icon" id="nav-menu__menu-item_icon_users">
+                    <script>
+                        insertIcon('nav-menu__menu-item_icon_users', ICONS_PATH, 'users', 'svg', null, null, '#7CA3F6');
+                    </script>
+                </div>
+                Пользователи
+            </a>
+
+            <a class="nav-menu__menu-item" href="#">
+                <div class="nav-menu__menu-item_icon" id="nav-menu__menu-item_icon_plugins">
+                    <script>
+                        insertIcon('nav-menu__menu-item_icon_plugins', ICONS_PATH, 'plugins', 'svg', null, null, '#7CA3F6');
+                    </script>
+                </div>
+                Плагины
+            </a>
+
+            <a class="nav-menu__menu-item" href="#">
+                <div class="nav-menu__menu-item_icon" id="nav-menu__menu-item_icon_example">
+                    <script>
+                        insertIcon('nav-menu__menu-item_icon_example', ICONS_PATH, 'tablet', 'svg', null, null, '#7CA3F6');
+                    </script>
+                </div>
+                Пункт меню
+            </a>
+
+            <a class="nav-menu__menu-item" href="#">
+                <div class="nav-menu__menu-item_icon" id="nav-menu__menu-item_icon_settings">
+                    <script>
+                        insertIcon('nav-menu__menu-item_icon_settings', ICONS_PATH, 'settings', 'svg', null, null, '#7CA3F6');
+                    </script>
+                </div>
+                Настройки
+            </a>
+        </div>
+
+        <!-- Контейнер с кнопкой перехода на документацию -->
+        <div class="help-section">
+            <img src="/assets/img/documentation-bg.svg" alt="">
+
+            <div class="help-section__icon" id="help-section__icon">
+                <script>
+                    insertIcon('help-section__icon', ICONS_PATH, 'question', 'svg', null, null, '#7CA3F6');
+                </script>
+            </div>
+                
+            <h2>Нужна помощь?</h2>
+            <p>Посмотрите документацию</p>
+            <a href="#">ДОКУМЕНТАЦИЯ</a>  
+        </div>
+
+        <!-- Сайт разработчика и номер версии -->
+        <div class="developer">
+            <h3>Soft by <a href="#">DevFinds</a></h3>
+            <h3>v.1.0</h3>
+        </div>
+
+     </div>
+</body>
+</html>
